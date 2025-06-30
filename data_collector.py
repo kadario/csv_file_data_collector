@@ -1,6 +1,13 @@
 import re
 import csv
 
+"""
+    Data Collector - all logic is here
+    Here we are getting arguments, parsing them, splitting to words, converting to numbers or stings,
+    filtering and aggregating them.
+    Then splitting to table header and body and return it
+"""
+
 
 class DataCollector:
     operators = {
@@ -30,6 +37,7 @@ class DataCollector:
         else:
             return None
 
+    # Convert string to number - float or string, depending of value we got from column
     def __convert_str_to_num(self, string: str):
         try:
             return int(string)
@@ -42,6 +50,7 @@ class DataCollector:
 
         return args_list
 
+    # Work with csv file
     def set_table_data_from_file(self):
         if self.__args_file is None:
             return "No file provided"
@@ -62,6 +71,7 @@ class DataCollector:
             print("No file found")
             return "No file found"
 
+    # Working with --were Filter
     def setup_where_arguments(self):
         where_args_list = self.__parse_args_to_list(
             self.__args_where, self.pattern_converter
@@ -78,6 +88,7 @@ class DataCollector:
 
         self.__table_body_rows = result_rows
 
+    # Working with --aggregate Aggregator
     def setup_aggregate_arguments(self):
         if len(self.__table_body_rows) == 0 or self.__table_body_rows == 0:
             print("No data to aggregate")
@@ -107,8 +118,10 @@ class DataCollector:
         self.__table_column_names = [aggregate_args_list[2]]
         self.__table_body_rows = [[str(aggregate_num)]]
 
+    # Table header - column names getter
     def get_result_table_header(self):
         return self.__table_column_names
 
+    # Table body - column with data getter
     def get_result_table_body(self):
         return self.__table_body_rows

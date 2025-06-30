@@ -4,6 +4,11 @@ import argparse
 from data_collector import DataCollector
 
 
+"""
+Main Class is using for getting arguments, setup all necessary data and print result
+"""
+
+
 class MainClass:
     def __init__(self):
         self._args = None
@@ -20,6 +25,7 @@ class MainClass:
 
         return parser.parse_args(args)
 
+    # Setup Data Collector to work with args
     def __setup_args_data(self):
         self._collector.set_table_data_from_file()
 
@@ -32,11 +38,13 @@ class MainClass:
                 # Collector setup aggregator
                 self._collector.setup_aggregate_arguments()
 
+    # Prepare data and setup collector
     def prepare_data(self, args=None):
         self._args = self.__setup_parser_args(args)
         self._collector = DataCollector(self._args)
         self.__setup_args_data()
 
+    # Get final results with data collector and print it to console
     def print_result(self):
         if self._args.file is None:
             print("No file provided")
