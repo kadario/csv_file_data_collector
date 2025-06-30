@@ -19,3 +19,22 @@ example.csv - you can change it to your own csv file
 min, max, avg.
 
 "rating=avg", "price=min", etc.
+
+## Examples of running:
+
+<div align="center">
+    <img src="/screenshots/ex-1.png" width="400px"</img> 
+</div>
+
+<div align="center">
+    <img src="/screenshots/ex-2.png" width="400px"</img> 
+</div>
+
+<div align="center">
+    <img src="/screenshots/ex-3.png" width="400px"</img> 
+</div>
+
+<div align="center">
+    <img src="/screenshots/ex-4.png" width="400px"</img> 
+</div>
+
