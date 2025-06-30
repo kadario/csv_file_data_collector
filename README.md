@@ -23,18 +23,18 @@ min, max, avg.
 ## Examples of running:
 
 <div align="center">
-    <img src="/screenshots/ex-1.png" width="400px"</img> 
+    <img src="/screenshots/ex-1.png"></img> 
 </div>
 
 <div align="center">
-    <img src="/screenshots/ex-2.png" width="400px"</img> 
+    <img src="/screenshots/ex-2.png" ></img> 
 </div>
 
 <div align="center">
-    <img src="/screenshots/ex-3.png" width="400px"</img> 
+    <img src="/screenshots/ex-3.png" ></img> 
 </div>
 
 <div align="center">
-    <img src="/screenshots/ex-4.png" width="400px"</img> 
+    <img src="/screenshots/ex-4.png" ></img> 
 </div>
 
